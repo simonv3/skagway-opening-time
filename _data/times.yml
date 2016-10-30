@@ -1,0 +1,61 @@
+- name: You Say Tomato
+  days:
+    - name: monday
+      open: closed
+    - name: tuesday
+      open: 12:30PM
+      close: 6:30PM
+    - name: wednesday
+      open: 12:30PM
+      close: 6:30PM
+    - name: thursday
+      open: 12:30PM
+      close: 6:30PM
+    - name: friday
+      open: 12:30PM
+      close: 6:30PM
+    - name: saturday
+      open: 12:30PM
+      close: 6:30PM
+    - name: sunday
+      open: closed
+
+- name: Skagway Hardware
+  days:
+    - name: monday
+      open: closed
+    - name: tuesday
+      open: 12:30PM
+      close: 6:30PM
+    - name: wednesday
+      open: 12:30PM
+      close: 6:30PM
+    - name: thursday
+      open: 12:30PM
+      close: 6:30PM
+    - name: friday
+      open: 12:30PM
+      close: 6:30PM
+    - name: saturday
+      open: 12:30PM
+      close: 6:30PM
+    - name: sunday
+      open: 11:00AM
+      close: 4:00PM
+
+- name: Fairway
+  days:
+    - name: monday
+      open: closed
+    - name: tuesday
+      open: 12:30PM - 6:30PM
+    - name: wednesday
+      open: 12:30PM - 6:30PM
+    - name: thursday
+      open: 12:30PM - 6:30PM
+    - name: friday
+      open: 12:30PM - 6:30PM
+    - name: saturday
+      open: 12:30PM - 6:30PM
+    - name: sunday
+      open: closed

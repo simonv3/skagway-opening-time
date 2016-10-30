@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div class="home">
+  <ul class="post-list">
+    {% for store in site.data.times %}
+      <li class="store" data-name="{{ store.name }}">
+        <h2>
+          {{ store.name }}
+        </h2>
+        <ul>
+          {% for day in store.days %}
+          <li class="day" data-day="{{ day.name }}" data-open="{{ day.open }}" data-close="{{ day.close }}">
+              {{ day.name }}: {{ day.open }}
+                {% if day.close %}
+                - {{ day.close }}
+                {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
