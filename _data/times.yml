@@ -46,16 +46,23 @@
 - name: Fairway
   days:
     - name: monday
-      open: closed
+      open: 9:00AM
+      close: 6:00PM
     - name: tuesday
-      open: 12:30PM - 6:30PM
+      open: 9:00AM
+      close: 6:00PM
     - name: wednesday
-      open: 12:30PM - 6:30PM
+      open: 9:00AM
+      close: 6:00PM
     - name: thursday
-      open: 12:30PM - 6:30PM
+      open: 9:00AM
+      close: 6:00PM
     - name: friday
-      open: 12:30PM - 6:30PM
+      open: 9:00AM
+      close: 6:00PM
     - name: saturday
-      open: 12:30PM - 6:30PM
+      open: 9:00AM
+      close: 6:00PM
     - name: sunday
-      open: closed
+      open: 10:00AM
+      close: 4:00PM
