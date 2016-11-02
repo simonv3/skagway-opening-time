@@ -1,49 +1,28 @@
 - name: You Say Tomato
+  short: You Say
   days:
     - name: monday
       open: closed
     - name: tuesday
-      open: 12:30PM
+      open: 12:00PM
       close: 6:30PM
     - name: wednesday
-      open: 12:30PM
+      open: 12:00PM
       close: 6:30PM
     - name: thursday
-      open: 12:30PM
+      open: 12:00PM
       close: 6:30PM
     - name: friday
-      open: 12:30PM
+      open: 12:00PM
       close: 6:30PM
     - name: saturday
-      open: 12:30PM
+      open: 12:00PM
       close: 6:30PM
     - name: sunday
       open: closed
-
-- name: Skagway Hardware
-  days:
-    - name: monday
-      open: closed
-    - name: tuesday
-      open: 12:30PM
-      close: 6:30PM
-    - name: wednesday
-      open: 12:30PM
-      close: 6:30PM
-    - name: thursday
-      open: 12:30PM
-      close: 6:30PM
-    - name: friday
-      open: 12:30PM
-      close: 6:30PM
-    - name: saturday
-      open: 12:30PM
-      close: 6:30PM
-    - name: sunday
-      open: 11:00AM
-      close: 4:00PM
 
 - name: Fairway
+  short: IGA
   days:
     - name: monday
       open: 9:00AM
@@ -66,3 +45,25 @@
     - name: sunday
       open: 10:00AM
       close: 4:00PM
+
+- name: Lil Log Cabin Bakery
+  short: Log Cabin
+  days:
+    - name: monday
+      open: closed
+    - name: tuesday
+      open: closed
+    - name: wednesday
+      open: 11:00AM
+      close: 3:00PM
+    - name: thursday
+      open: 11:00AM
+      close: 3:00PM
+    - name: friday
+      open: 11:00AM
+      close: 3:00PM
+    - name: saturday
+      open: 11:00AM
+      close: 3:00PM
+    - name: sunday
+      open: closed

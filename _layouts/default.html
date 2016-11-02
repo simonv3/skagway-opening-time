@@ -21,31 +21,59 @@
 
   <script>
     $(document).ready(function () {
+
+      var filter = getUrlParameter('filter') || ''
+
       $('.store').each(function (storeIdx) {
         var $store = $(this);
+
+        // if (filter || filter === '') {
+
+          filter = filter.toLowerCase();
+
+        // }
+        var matchesFilter = $store.data().name.toLowerCase().indexOf(filter) > -1;
+
+        console.log(matchesFilter);
+
+        if (matchesFilter) { $store.addClass('show'); }
+        $('input[name="filter"]').val(filter);
+
         $(this).find('.day').each(function (dayIdx) {
           var $day = $(this);
           var data = $day.data();
           if (moment().format('dddd').toLowerCase() === data.day) {
-            console.log($store.data().name)
             // It's this day of the week!
+            $day.addClass('today');
 
             var now = moment();
-            console.log(data.open, data.closed)
             var open = moment(data.open, 'h:mmA');
             var closed = moment(data.close, 'h:mmA');
-            console.log(open.format('h:mm'), closed.format('h:mm'))
+
             if (open.isBefore(now) && closed.isAfter(now)) {
-              $store.css('background', 'green');
-              $day.css('background', 'green');
-              $store.children('h2').append(': Open')
+              $store.addClass('open');
             } else {
-              $day.css('background', 'red');
+              $store.addClass('closed');
             }
           }
         });
       });
     });
+
+    var getUrlParameter = function getUrlParameter(sParam) {
+      var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+          sURLVariables = sPageURL.split('&'),
+          sParameterName,
+          i;
+
+      for (i = 0; i < sURLVariables.length; i++) {
+          sParameterName = sURLVariables[i].split('=');
+
+          if (sParameterName[0] === sParam) {
+              return sParameterName[1] === undefined ? true : sParameterName[1];
+          }
+      }
+  };
   </script>
   </body>
 

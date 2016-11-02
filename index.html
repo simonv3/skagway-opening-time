@@ -3,8 +3,12 @@ layout: default
 ---
 
 <div class="home">
-  <ul class="post-list">
-    {% for store in site.data.times %}
+  <form method="GET" class="search">
+    <input type="search" name="filter"/>
+    <button type="submit">Search</button>
+  </form>
+  <ul class="stores">
+    {% for store in site.data.times | sort: "name" %}
       <li class="store" data-name="{{ store.name }}">
         <h2>
           {{ store.name }}
@@ -12,17 +16,16 @@ layout: default
         <ul>
           {% for day in store.days %}
           <li class="day" data-day="{{ day.name }}" data-open="{{ day.open }}" data-close="{{ day.close }}">
-              {{ day.name }}: {{ day.open }}
+              {{ day.name }}:
+              <span class="opening-times">{{ day.open }}
                 {% if day.close %}
                 - {{ day.close }}
                 {% endif %}
+              </span>
           </li>
           {% endfor %}
         </ul>
       </li>
     {% endfor %}
   </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
 </div>
