@@ -1,6 +1,11 @@
 .search {
+  display: flex;
+  flex-wrap: wrap;
+
   input {
     font-size: 1rem;
+    flex-grow: 3;
+    /*min-width: 300px;*/
     padding: .5rem;
     width: 79%;
     -webkit-appearance: none;
@@ -9,6 +14,7 @@
 
   button {
     width: 18%;
+    flex-grow: 1;
     font-size: 1rem;
     padding: .5rem;
     -webkit-appearance: none;
@@ -16,6 +22,7 @@
     border: 1px solid $card-border-color;
     background-color: $brand-color;
     color: white;
+    min-width: 200px;
   }
 }
 
@@ -28,11 +35,24 @@ ul {
   margin-left: 0;
 }
 
+.stores {
+  width: 100%;
+
+  @include media-query($on-palm) {
+    display: inline-block;
+  }
+
+  @include media-query($on-laptop) {
+    display: inline-block;
+  }
+}
+
 .store {
   vertical-align: top;
   width: 30%;
-  min-width: $wide-max-width / 3;
-  margin: 3%;
+  flex-grow: 1;
+  min-width: 300px;
+  margin: 1rem;
   margin-left: 0;
   padding: 2rem 0;
   background-color: $card-color;
@@ -45,6 +65,16 @@ ul {
 
   h2 {
     padding: 0 2rem;
+  }
+
+  @include media-query($on-laptop) {
+    width: 46%;
+    min-width: auto;
+  }
+
+  @include media-query($on-palm) {
+    width: 100%;
+    min-width: auto;
   }
 }
 

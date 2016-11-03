@@ -67,3 +67,28 @@
       close: 3:00PM
     - name: sunday
       open: closed
+
+- name: Skagway Hardware
+  short: Hardware
+  days:
+    - name: monday
+      open: 10:00AM
+      close: 5:00PM
+    - name: tuesday
+      open: 10:00AM
+      close: 5:00PM
+    - name: wednesday
+      open: 10:00AM
+      close: 5:00PM
+    - name: thursday
+      open: 10:00AM
+      close: 5:00PM
+    - name: friday
+      open: 10:00AM
+      close: 5:00PM
+    - name: saturday
+      open: 10:00AM
+      close: 5:00PM
+    - name: sunday
+      open: 10:00AM
+      close: 4:00PM
